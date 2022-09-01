@@ -1,0 +1,56 @@
+@use '../../sass' as s;
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: s.em(16, 16);
+  background-color: s.$semi-dark-blue;
+  z-index: 99;
+
+  @include s.breakpoint-up(medium) {
+    position: fixed;
+    top: 24px;
+    left: 24px;
+    right: 24px;
+    padding: s.em(24, 16);
+    border-radius: 10px;
+  }
+  @include s.breakpoint-up(xlarge) {
+    flex-direction: column;
+    top: 32px;
+    bottom: 32px;
+    left: 32px;
+    width: 96px;
+    padding: s.em(35, 16) s.em(32, 16);
+    border-radius: 20px;
+  }
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  text-transform: uppercase;
+  @include s.breakpoint-up(xlarge) {
+    flex-direction: column;
+  }
+
+  li {
+    &:not(:last-child) {
+      margin-right: s.em(32, 16);
+      @include s.breakpoint-up(xlarge) {
+        margin-right: 0;
+        margin-bottom: s.em(32, 16);
+      }
+    }
+
+    svg {
+      cursor: pointer;
+      &:hover path {
+        fill: s.$red;
+      }
+    }
+  }
+}
