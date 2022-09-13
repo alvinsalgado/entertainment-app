@@ -1,0 +1,37 @@
+@use '../../sass' as s;
+
+.search-form {
+  max-width: s.rem(1440);
+  margin: 0 auto;
+  padding: s.em(24, 16) s.em(16, 16) 0;
+  display: flex;
+  align-items: center;
+  margin-bottom: s.em(24, 16);
+  @include s.breakpoint-up(medium) {
+    padding: s.em(128, 16) s.em(24, 16) 0;
+    margin-bottom: s.em(34, 16);
+  }
+
+  @include s.breakpoint-up(xlarge) {
+    padding: s.em(64, 16) 0 s.em(34, 16) s.em(164, 16);
+    margin-bottom: 0;
+  }
+}
+.search-icon {
+  margin-right: s.em(18, 16);
+}
+.form-input {
+  width: 100%;
+  border: transparent;
+  background-color: transparent;
+  color: s.$white;
+
+  &:hover {
+    box-shadow: 0 1px s.$white;
+  }
+  &:focus {
+    outline: none;
+    box-shadow: 0 1px s.$white;
+    caret-color: s.$red;
+  }
+}
