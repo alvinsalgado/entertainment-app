@@ -1,0 +1,98 @@
+@use '../../sass' as s;
+
+body {
+  background-color: s.$dark-blue;
+  overflow-x: hidden;
+}
+/* typography */
+
+.fs-900,
+.fs-800,
+.fs-500,
+.fs-400 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+  color: s.$white;
+}
+
+.fs-700,
+.fs-600 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+}
+.fs-900 {
+  font-size: s.rem(20);
+  line-height: s.rem(25);
+  letter-spacing: -0.3125px;
+  color: s.$white;
+
+  @include s.breakpoint-up(medium) {
+    font-size: s.rem(32);
+    line-height: s.rem(40);
+    letter-spacing: -0.5px;
+  }
+}
+.fs-800 {
+  font-size: s.rem(16);
+  line-height: s.rem(20);
+
+  color: s.$greyish-blue;
+
+  @include s.breakpoint-up(medium) {
+    font-size: s.rem(24);
+    line-height: s.rem(30);
+  }
+}
+.fs-700 {
+  font-size: s.rem(15);
+  line-height: s.rem(19);
+  color: s.$white;
+
+  @include s.breakpoint-up(medium) {
+    font-size: s.rem(24);
+    line-height: s.rem(30);
+  }
+}
+.fs-600 {
+  font-size: s.rem(14);
+  line-height: s.rem(18);
+  color: s.$white;
+
+  @include s.breakpoint-up(medium) {
+    font-size: s.rem(18);
+    line-height: s.rem(23);
+  }
+}
+.fs-500 {
+  font-size: s.rem(12);
+  line-height: s.rem(15);
+  color: rgba(s.$white, 0.75);
+
+  @include s.breakpoint-up(medium) {
+    font-size: s.rem(15);
+    line-height: s.rem(19);
+  }
+}
+.fs-400 {
+  font-size: s.rem(11);
+  line-height: s.rem(14);
+  color: rgba(s.$white, 0.75);
+
+  @include s.breakpoint-up(medium) {
+    font-size: s.rem(13);
+    line-height: s.rem(16);
+  }
+}
+.container {
+  max-width: s.rem(1440);
+  margin: 0 auto;
+  padding: 0 s.em(16, 16) s.em(100, 16);
+
+  @include s.breakpoint-up(medium) {
+    padding: 0 s.em(24, 16) s.em(100, 16);
+  }
+
+  @include s.breakpoint-up(xlarge) {
+    padding: 0 s.em(36, 16) s.em(150, 16) s.em(164, 16);
+  }
+}
