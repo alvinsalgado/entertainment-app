@@ -1,0 +1,42 @@
+@use '../../sass' as s;
+.card-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  min-height: s.rem(154);
+  @include s.breakpoint-up(medium) {
+    min-height: s.rem(192);
+  }
+
+  @include s.breakpoint-up(xlarge) {
+    min-height: s.rem(226);
+  }
+}
+.card-container {
+  .card-img {
+    width: 100%;
+    min-height: s.rem(110);
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: s.em(8, 16);
+    overflow: hidden;
+    border-radius: 8px;
+    @include s.breakpoint-up(medium) {
+      min-height: s.rem(140);
+    }
+
+    @include s.breakpoint-up(xlarge) {
+      min-height: s.rem(174);
+    }
+  }
+}
+
+.card-body {
+  display: flex;
+  gap: s.rem(16);
+  margin-bottom: s.em(5, 16);
+  .media-icon {
+    display: inline-block;
+    margin-right: s.em(6, 16);
+  }
+}
