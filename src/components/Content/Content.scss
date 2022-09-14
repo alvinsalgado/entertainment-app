@@ -1,0 +1,38 @@
+@use '../../sass' as s;
+
+.content-container {
+  margin-bottom: s.em(24, 16);
+  @include s.breakpoint-up(medium) {
+    margin-bottom: s.em(39, 16);
+  }
+
+  @include s.breakpoint-up(xlarge) {
+    margin-bottom: s.em(40, 16);
+  }
+}
+.content-heading {
+  margin-bottom: s.em(24, 20);
+
+  @include s.breakpoint-up(medium) {
+    margin-bottom: s.em(24, 32);
+  }
+  @include s.breakpoint-up(xlarge) {
+    margin-bottom: s.em(32, 32);
+  }
+}
+.content {
+  display: grid;
+  gap: s.rem(16);
+  margin: 0 auto;
+
+  grid-template-columns: repeat(2, minmax(164px, 1fr));
+  @include s.breakpoint-up(medium) {
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: s.rem(24) s.rem(30);
+  }
+
+  @include s.breakpoint-up(xlarge) {
+    grid-template-columns: repeat(4, minmax(280px, 1fr));
+    gap: s.rem(32) s.rem(40);
+  }
+}
