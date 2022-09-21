@@ -2,7 +2,8 @@ import categoryMovie from '../assets/icon-category-movie.svg';
 import categoryTv from '../assets/icon-category-tv.svg';
 import search from '../assets/icon-search.svg';
 import logo from '../assets/logo.svg';
-
+import bookmark from '../assets/icon-bookmark-full.svg';
+import bookmarkEmp from '../assets/icon-bookmark-empty.svg';
 export const bookmarkEmpty = {
   image: (
     <svg
@@ -35,6 +36,6 @@ export const images = {
   categoryTv,
   search,
   logo,
+  bookmark,
+  bookmarkEmp,
 };
-
-// export default images;
