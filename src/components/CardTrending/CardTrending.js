@@ -3,7 +3,7 @@ import Bookmark from '../Bookmark/Bookmark';
 import { Link } from 'react-router-dom';
 import { images } from '../../utils/images';
 import './CardTrending.scss';
-const IMG_API = 'https://image.tmdb.org/t/p/original/';
+const IMG_API = 'https://image.tmdb.org/t/p/original';
 
 const CardTrending = ({ movie }) => {
   const {
@@ -22,7 +22,7 @@ const CardTrending = ({ movie }) => {
         <img src={IMG_API + backdrop_path} alt='poster' />
         <Bookmark movie={movie} media={media_type} />
         <div className='movie-card-details'>
-          <ul class='fs-500 card-body'>
+          <ul className='fs-500 card-body'>
             {release_date && (
               <li style={{ listStyleType: 'none' }}>
                 {release_date.slice(0, 4)}
