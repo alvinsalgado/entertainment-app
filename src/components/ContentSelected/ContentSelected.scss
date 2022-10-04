@@ -1,0 +1,94 @@
+@use '../../sass' as s;
+
+.content-selected-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  @include s.breakpoint-up(xlarge) {
+    margin-left: s.em(128, 16);
+    margin-right: s.em(36, 16);
+  }
+  .content-selected-container {
+    max-width: s.rem(1440);
+    margin: 0 auto;
+    display: grid;
+    gap: s.rem(32);
+    padding: s.em(24, 16);
+    width: 100%;
+    @include s.breakpoint-up(large) {
+      padding: s.em(24, 16) s.em(36, 16);
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+
+  .content-selected-poster {
+    margin: 0 auto;
+    max-width: s.rem(446);
+    max-height: s.rem(668);
+  }
+  .content-selected-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    @include s.breakpoint-up(large) {
+      text-align: left;
+    }
+    .content-selected-heading {
+      margin-bottom: s.em(5, 20);
+    }
+    .card-body {
+      margin-bottom: s.em(26, 13);
+      justify-content: center;
+      @include s.breakpoint-up(large) {
+        justify-content: flex-start;
+      }
+    }
+
+    .btn {
+      display: inline-block;
+      background: s.$semi-dark-blue;
+      color: s.$white;
+      padding: s.em(12, 16) s.em(42, 16);
+      margin-top: s.rem(16);
+      border-radius: 8px;
+      text-transform: capitalize;
+      text-align: center;
+      @include s.breakpoint-up(xlarge) {
+        width: 75%;
+      }
+    }
+
+    p {
+      max-width: s.rem(568);
+      margin: 0 auto;
+      line-height: 1.8;
+      margin-top: s.em(24, 16);
+      @include s.breakpoint-up(large) {
+        margin-left: 0;
+      }
+    }
+    .tag {
+      background-color: s.$semi-dark-blue;
+      border-radius: 50%;
+      width: s.rem(36);
+      height: s.rem(36);
+      padding: s.em(8, 16);
+      font-weight: bold;
+      &.green {
+        color: green;
+        border: 2px solid green;
+      }
+
+      &.orange {
+        color: orange;
+        border: 2px solid orange;
+      }
+
+      &.red {
+        color: red;
+        border: 2px solid red;
+      }
+    }
+  }
+}
