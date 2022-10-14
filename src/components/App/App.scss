@@ -86,14 +86,14 @@ body {
 .container {
   max-width: s.rem(1440);
   margin: 0 auto;
-  padding: 0 s.em(16, 16) s.em(100, 16);
+  padding: 0 s.em(16, 16) s.em(50, 16);
 
   @include s.breakpoint-up(medium) {
-    padding: 0 s.em(24, 16) s.em(100, 16);
+    padding: 0 s.em(24, 16) s.em(50, 16);
   }
 
   @include s.breakpoint-up(xlarge) {
-    padding: 0 s.em(36, 16) s.em(150, 16) s.em(164, 16);
+    padding: 0 s.em(36, 16) s.em(50, 16) s.em(164, 16);
   }
 }
 .loading {
