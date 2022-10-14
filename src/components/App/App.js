@@ -1,4 +1,5 @@
 import Navbar from '../Navbar/Navbar';
+import Footer from '../Footer/Footer';
 import { Route, Routes } from 'react-router-dom';
 import Home from '../../pages/Home';
 import Search from '../Search/Search';
@@ -21,6 +22,7 @@ function App() {
         <Route path='/results/:query' element={<SearchPage />} />
         <Route path='/selected/:id' element={<ContentSelectedPage />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
