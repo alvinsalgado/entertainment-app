@@ -4,6 +4,7 @@ import search from '../assets/icon-search.svg';
 import logo from '../assets/logo.svg';
 import bookmark from '../assets/icon-bookmark-full.svg';
 import bookmarkEmp from '../assets/icon-bookmark-empty.svg';
+import tmdb from '../assets/primary-long-tmdb.svg';
 export const bookmarkEmpty = {
   image: (
     <svg
@@ -38,4 +39,5 @@ export const images = {
   logo,
   bookmark,
   bookmarkEmp,
+  tmdb,
 };
