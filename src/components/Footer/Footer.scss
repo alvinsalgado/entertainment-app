@@ -1,0 +1,24 @@
+@use '../../sass' as s;
+
+.footer {
+  max-width: s.rem(1440);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: s.em(16, 16);
+  padding: 0 s.em(16, 16);
+
+  @include s.breakpoint-up(medium) {
+    padding: 0 s.em(24, 16);
+  }
+
+  @include s.breakpoint-up(xlarge) {
+    padding: 0 s.em(36, 16) 0 s.em(164, 16);
+  }
+
+  img {
+    width: s.rem(150);
+    height: s.rem(30);
+  }
+}
