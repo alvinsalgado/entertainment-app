@@ -11,9 +11,9 @@ const ContentSelected = () => {
 
   let API = '';
   if (from === 'movie') {
-    API = ` https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&language=en-US`;
+    API = ` https://api.themoviedb.org/3/movie/${id}?api_key=${process.env.REACT_APP_TMDB_API_KEY}&language=en-US`;
   } else {
-    API = ` https://api.themoviedb.org/3/tv/${id}?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&language=en-US`;
+    API = ` https://api.themoviedb.org/3/tv/${id}?api_key=${process.env.REACT_APP_TMDB_API_KEY}&language=en-US`;
   }
   const { isLoading, data: movie } = useFetch(API);
 
@@ -73,8 +73,8 @@ const ContentSelected = () => {
                   : `${number_of_episodes} episodes`}
               </li>
               {genres &&
-                genres.map((genre) => {
-                  return <li>{genre.name}</li>;
+                genres.map((genre, i) => {
+                  return <li key={i}>{genre.name}</li>;
                 })}
 
               {release_date && <li>{release_date.slice(0, 4)}</li>}

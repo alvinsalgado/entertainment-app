@@ -1,9 +1,9 @@
 import React, { useState, useContext, useEffect } from 'react';
 import useFetch from '../Hooks/useFetch';
 
-const TRENDING_API_ENDPOINT = `https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_MOVIE_API_KEY}`;
-const POPULAR_MOVIE_ENDPOINT = `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&language=en-US&page=1`;
-const POPULAR_TV_ENDPOINT = `https://api.themoviedb.org/3/tv/popular?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&language=en-US&page=1`;
+const TRENDING_API_ENDPOINT = `https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_TMDB_API_KEY}`;
+const POPULAR_MOVIE_ENDPOINT = `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_TMDB_API_KEY}&language=en-US&page=1`;
+const POPULAR_TV_ENDPOINT = `https://api.themoviedb.org/3/tv/popular?api_key=${process.env.REACT_APP_TMDB_API_KEY}&language=en-US&page=1`;
 
 const AppContext = React.createContext();
 const AppProvider = ({ children }) => {
