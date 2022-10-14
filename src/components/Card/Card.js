@@ -11,6 +11,7 @@ const Card = ({
   media_type,
   name,
   backdrop_path,
+  poster_path,
   movie,
   release_date,
   first_air_date,
@@ -24,7 +25,15 @@ const Card = ({
   return (
     <Link to={`/selected/${id}`} state={{ from: media }}>
       <div className='card-container'>
-        <img className='card-img' src={IMG_API + backdrop_path} alt='poster' />
+        <img
+          className='card-img'
+          src={
+            backdrop_path === null
+              ? IMG_API + poster_path
+              : IMG_API + backdrop_path
+          }
+          alt='poster'
+        />
         <Bookmark movie={movie} media={media} />
 
         <ul className='fs-400 card-body'>
