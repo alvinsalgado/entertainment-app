@@ -13,7 +13,7 @@ const ContentTrending = ({ data, isLoading, limit, heading }) => {
       <h1 className='fs-900'>{heading}</h1>
       <div className='media-scroller snaps-inline'>
         {data.slice(0, limit).map((movie) => {
-          return <CardTrending movie={movie} />;
+          return <CardTrending movie={movie} key={movie.id} />;
         })}
       </div>
     </div>

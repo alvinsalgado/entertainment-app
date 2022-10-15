@@ -8,7 +8,7 @@ const Content = ({ data, heading, limit, media }) => {
       <h1 className='fs-900 content-heading'>{heading}</h1>
       <div className='content'>
         {data.slice(0, limit).map((movie) => {
-          return <Card {...movie} movie={movie} media={media} />;
+          return <Card {...movie} movie={movie} key={movie.id} media={media} />;
         })}
       </div>
     </div>
